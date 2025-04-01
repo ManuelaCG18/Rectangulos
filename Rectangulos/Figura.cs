@@ -9,6 +9,16 @@ namespace Rectangulos
 {
     public abstract class Figura
     {
+        public int X { get; set; }
+        public int Y { get; set; }
+        public Color ColorFigura { get; set; }
+
+        public Figura(int x, int y, Color color)
+        {
+            X = x;
+            Y = y;
+            ColorFigura = color;
+        }
         public abstract void Dibujar(Graphics g);
     }
 }
