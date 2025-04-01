@@ -18,7 +18,6 @@ namespace Rectangulos
         public Form1()
         {
             InitializeComponent();
-            // falta
         }
 
 
@@ -38,12 +37,19 @@ namespace Rectangulos
                 int x = int.Parse(txtCoordenadaX.Text);
                 int y = int.Parse(txtCoordenadaY.Text);
 
-                Figura rectangulo = FiguraFactory.CrearRectangulo(x, y, colorSeleccionado);
+                // genera un color aleatorio entre 0 y 255 para cada componente RGB
+                Random rand = new Random();
+                Color colorAleatorio = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
+
+                Figura rectangulo = FiguraFactory.CrearRectangulo(x, y, colorAleatorio);
                 figuras.Add(rectangulo);
                 contadorRectangulos++;
 
                 lblContador.Text = "Rectangulos creados: " + contadorRectangulos;
                 panelDibujo.Invalidate();
+
+                txtCoordenadaX.Clear();
+                txtCoordenadaY.Clear();
             }
             catch (FormatException)
             {
@@ -69,6 +75,10 @@ namespace Rectangulos
             contadorRectangulos = 0;
             lblContador.Text = "Rectangulos creados: 0 ";
             panelDibujo.Invalidate();
+
+
+            txtCoordenadaX.Clear();
+            txtCoordenadaY.Clear();
         }
     }
 }
