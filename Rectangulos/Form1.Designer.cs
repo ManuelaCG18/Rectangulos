@@ -35,12 +35,13 @@
             this.panelDibujo = new System.Windows.Forms.Panel();
             this.lblContador = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picColor)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCoordenadaX
             // 
-            this.txtCoordenadaX.Location = new System.Drawing.Point(102, 106);
+            this.txtCoordenadaX.Location = new System.Drawing.Point(98, 80);
             this.txtCoordenadaX.Name = "txtCoordenadaX";
             this.txtCoordenadaX.Size = new System.Drawing.Size(139, 26);
             this.txtCoordenadaX.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // txtCoordenadaY
             // 
-            this.txtCoordenadaY.Location = new System.Drawing.Point(102, 197);
+            this.txtCoordenadaY.Location = new System.Drawing.Point(98, 171);
             this.txtCoordenadaY.Name = "txtCoordenadaY";
             this.txtCoordenadaY.Size = new System.Drawing.Size(139, 26);
             this.txtCoordenadaY.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // picColor
             // 
-            this.picColor.Location = new System.Drawing.Point(247, 228);
+            this.picColor.Location = new System.Drawing.Point(238, 261);
             this.picColor.Name = "picColor";
             this.picColor.Size = new System.Drawing.Size(89, 103);
             this.picColor.TabIndex = 3;
@@ -65,7 +66,9 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(216, 429);
+            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.ForeColor = System.Drawing.Color.Indigo;
+            this.btnCrear.Location = new System.Drawing.Point(97, 249);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(135, 39);
             this.btnCrear.TabIndex = 4;
@@ -85,15 +88,19 @@
             // lblContador
             // 
             this.lblContador.AutoSize = true;
-            this.lblContador.Location = new System.Drawing.Point(92, 335);
+            this.lblContador.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContador.ForeColor = System.Drawing.Color.Indigo;
+            this.lblContador.Location = new System.Drawing.Point(33, 343);
             this.lblContador.Name = "lblContador";
-            this.lblContador.Size = new System.Drawing.Size(51, 20);
+            this.lblContador.Size = new System.Drawing.Size(96, 38);
             this.lblContador.TabIndex = 6;
             this.lblContador.Text = "label1";
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(391, 429);
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.Indigo;
+            this.btnLimpiar.Location = new System.Drawing.Point(479, 444);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(135, 39);
             this.btnLimpiar.TabIndex = 7;
@@ -101,11 +108,23 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Indigo;
+            this.label1.Location = new System.Drawing.Point(213, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(331, 38);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Creación de rectangulos";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(811, 495);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblContador);
             this.Controls.Add(this.panelDibujo);
@@ -129,6 +148,7 @@
         private System.Windows.Forms.Panel panelDibujo;
         private System.Windows.Forms.Label lblContador;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label label1;
     }
 }
 
