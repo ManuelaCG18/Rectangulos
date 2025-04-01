@@ -30,13 +30,11 @@
         {
             this.txtCoordenadaX = new System.Windows.Forms.TextBox();
             this.txtCoordenadaY = new System.Windows.Forms.TextBox();
-            this.picColor = new System.Windows.Forms.PictureBox();
             this.btnCrear = new System.Windows.Forms.Button();
             this.panelDibujo = new System.Windows.Forms.Panel();
             this.lblContador = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picColor)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCoordenadaX
@@ -54,15 +52,6 @@
             this.txtCoordenadaY.Size = new System.Drawing.Size(139, 26);
             this.txtCoordenadaY.TabIndex = 1;
             this.txtCoordenadaY.Text = "Coordenada Y";
-            // 
-            // picColor
-            // 
-            this.picColor.Location = new System.Drawing.Point(238, 261);
-            this.picColor.Name = "picColor";
-            this.picColor.Size = new System.Drawing.Size(89, 103);
-            this.picColor.TabIndex = 3;
-            this.picColor.TabStop = false;
-            this.picColor.Click += new System.EventHandler(this.picColor_Click);
             // 
             // btnCrear
             // 
@@ -129,11 +118,9 @@
             this.Controls.Add(this.lblContador);
             this.Controls.Add(this.panelDibujo);
             this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.picColor);
             this.Controls.Add(this.txtCoordenadaY);
             this.Controls.Add(this.txtCoordenadaX);
             this.Name = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.picColor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +130,6 @@
 
         private System.Windows.Forms.TextBox txtCoordenadaX;
         private System.Windows.Forms.TextBox txtCoordenadaY;
-        private System.Windows.Forms.PictureBox picColor;
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Panel panelDibujo;
         private System.Windows.Forms.Label lblContador;

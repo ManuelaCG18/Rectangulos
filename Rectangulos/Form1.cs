@@ -56,18 +56,7 @@ namespace Rectangulos
                 MessageBox.Show("Ingrese valores validos para las coordenadas X y Y ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void picColor_Click(object sender, EventArgs e)
-        {
-            using (ColorDialog colorDialog = new ColorDialog())
-            {
-                if (colorDialog.ShowDialog() == DialogResult.OK)
-                {
-                    colorSeleccionado = colorDialog.Color;
-                    picColor.BackColor = colorSeleccionado; // muestra el color seleccionado
-                }
-            }
-        }
+     
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
