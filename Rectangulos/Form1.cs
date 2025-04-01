@@ -14,7 +14,7 @@ namespace Rectangulos
     {
         private List<Figura> figuras = new List<Figura>(); // lista de figuras dibujadas
         private int contadorRectangulos = 0;
-        private Color colorSeleccionado = Color.Pink;
+      
         public Form1()
         {
             InitializeComponent();
