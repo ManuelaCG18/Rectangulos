@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing; // este es necesario para usar Color y Graphics
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Rectangulos
 {
-    public abstract class Figura
+    class FiguraFactory
     {
-        public abstract void Dibujar(Graphics g);
     }
 }
