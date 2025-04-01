@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Rectangulos
 {
-    class FiguraFactory
+    public class FiguraFactory
     {
+        public static Figura CrearRectangulo(int x, int y, Color color)
+        {
+            return new Rectangulo(x, y, color);
+        }
     }
 }
