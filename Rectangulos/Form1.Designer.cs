@@ -129,6 +129,7 @@
             this.cmbFiguras.Size = new System.Drawing.Size(135, 21);
             this.cmbFiguras.TabIndex = 9;
             this.cmbFiguras.Text = "Seleccione una figura";
+            this.cmbFiguras.SelectedIndexChanged += new System.EventHandler(this.cmbFiguras_SelectedIndexChanged);
             // 
             // Form1
             // 

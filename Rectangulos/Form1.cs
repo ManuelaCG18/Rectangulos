@@ -13,7 +13,8 @@ namespace Rectangulos
     public partial class Form1 : Form
     {
         private List<Figura> figuras = new List<Figura>(); // lista de figuras dibujadas
-        private int contadorRectangulos = 0;
+        private int contadorFiguras = 0;
+        private string figuraSeleccionada = null;
       
         public Form1()
         {
@@ -42,15 +43,36 @@ namespace Rectangulos
                 Color colorAleatorio = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
 
                 
-                Figura rectangulo = FiguraFactory.CrearRectangulo(x, y, colorAleatorio);
-                figuras.Add(rectangulo);
-                contadorRectangulos++;
+                Figura figura = null;
 
-                lblContador.Text = "Rectangulos creados: " + contadorRectangulos;
-                panelDibujo.Invalidate();
+                if(string.IsNullOrEmpty(figuraSeleccionada))
+                {
+                    MessageBox.Show("Seleccione una figura del combo box ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (figuraSeleccionada == "Rectangulo")
+                {
+                    figura = FiguraFactory.CrearRectangulo(x, y, colorAleatorio);
+                }
+                else if (figuraSeleccionada == "Circulo")
+                {
+                    figura = FiguraFactory.CrearCirculo(x, y, colorAleatorio);
+                }
+                
+
+                if(figura != null)
+                {
+                    figuras.Add(figura);
+                    contadorFiguras++;
+
+                    lblContador.Text = "Figuras creadas: " + contadorFiguras;
+                    panelDibujo.Invalidate();
+                }
 
                 txtCoordenadaX.Clear();
                 txtCoordenadaY.Clear();
+
             }
             catch (FormatException)
             {
@@ -62,13 +84,18 @@ namespace Rectangulos
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             figuras.Clear();
-            contadorRectangulos = 0;
+            contadorFiguras = 0;
             lblContador.Text = "Rectangulos creados: 0 ";
             panelDibujo.Invalidate();
 
 
             txtCoordenadaX.Clear();
             txtCoordenadaY.Clear();
+        }
+
+        private void cmbFiguras_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            figuraSeleccionada = cmbFiguras.SelectedItem.ToString();
         }
     }
 }

@@ -13,5 +13,10 @@ namespace Rectangulos
         {
             return new Rectangulo(x, y, color);
         }
+
+        public static Figura CrearCirculo(int x, int y, Color color)
+        {
+            return new Circulo(x, y, color);
+        }
     }
 }
