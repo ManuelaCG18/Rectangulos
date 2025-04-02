@@ -41,6 +41,7 @@ namespace Rectangulos
                 Random rand = new Random();
                 Color colorAleatorio = Color.FromArgb(rand.Next(256), rand.Next(256), rand.Next(256));
 
+                
                 Figura rectangulo = FiguraFactory.CrearRectangulo(x, y, colorAleatorio);
                 figuras.Add(rectangulo);
                 contadorRectangulos++;
