@@ -19,6 +19,11 @@ namespace Rectangulos
         public Form1()
         {
             InitializeComponent();
+            if (cmbFiguras.Items.Count > 0)
+            {
+                cmbFiguras.SelectedIndex = 0;
+                figuraSeleccionada = cmbFiguras.SelectedItem.ToString();
+            }
         }
 
 
@@ -59,9 +64,17 @@ namespace Rectangulos
                 {
                     figura = FiguraFactory.CrearCirculo(x, y, colorAleatorio);
                 }
-                
+                else if (figuraSeleccionada == "Linea")
+                {
+                    figura = FiguraFactory.CrearLinea(x, y, colorAleatorio);
+                }
+                else if (figuraSeleccionada == "Triangulo")
+                {
+                    figura = FiguraFactory.CrearTriangulo(x, y, colorAleatorio);
+                }
 
-                if(figura != null)
+
+                if (figura != null)
                 {
                     figuras.Add(figura);
                     contadorFiguras++;
@@ -85,7 +98,7 @@ namespace Rectangulos
         {
             figuras.Clear();
             contadorFiguras = 0;
-            lblContador.Text = "Rectangulos creados: 0 ";
+            lblContador.Text = "Figuras creadas: 0 ";
             panelDibujo.Invalidate();
 
 

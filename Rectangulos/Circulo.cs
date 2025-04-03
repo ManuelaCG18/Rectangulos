@@ -9,7 +9,7 @@ namespace Rectangulos
 {
     public class Circulo : Figura
     {
-        private int radio { get; set; }
+        private const int Radio = 30;
 
         public Circulo(int x, int y, Color color) : base(x, y, color) { }
 
@@ -17,7 +17,7 @@ namespace Rectangulos
         {
             using (Brush brush = new SolidBrush(ColorFigura))
             {
-                g.FillEllipse(brush, X - radio, Y - radio, 2 * radio, 2 * radio);
+                g.FillEllipse(brush, X - Radio, Y - Radio, 2 * Radio, 2 * Radio);
             }
         }
     }
